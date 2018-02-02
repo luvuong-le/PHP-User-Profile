@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php require "db/config.php" ?>
 
 <?php require "include/functions/_page_title.php" ?>

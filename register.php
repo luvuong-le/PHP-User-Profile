@@ -6,6 +6,7 @@
 </head>
 <body>
     <?php
+        require "db/connection.php";
         // If login is set then require the login-function file to log in the user
         if (isset($_POST["register"])) {
             require "include/functions/_register.php";

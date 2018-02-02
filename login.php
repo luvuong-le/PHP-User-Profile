@@ -9,7 +9,7 @@
         // If login is set then require the login-function file to log in the user
         if (isset($_POST["login"])) {
             require "include/functions/_login.php";
-        }
+        } 
     ?>
 
     <?php require "include/partials/_nav.php" ?>
