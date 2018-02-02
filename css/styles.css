@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Crete+Round");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Crete Round', serif; }
+
+.nav {
+  font-size: 1.5rem;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  padding: 3rem 30rem;
+  background: #000; }
+  .nav__logo {
+    font-size: 2rem;
+    font-weight: bold; }
+  .nav__list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+  .nav__item, .nav__logo {
+    text-decoration: none;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    transition: all .2s; }
+    .nav__item:hover, .nav__logo:hover {
+      background: #fff;
+      color: #000; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 3rem; }
+  .header__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center; }
+
+.form-container {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  padding: 3rem; }
+  .form-container__title {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  .form-container__form {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    padding: 5rem;
+    box-shadow: 1rem 1rem 1rem #aaa;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid #aaa; }
+  .form-container__input {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid lightblue; }
+  .form-container__btn--submit {
+    border: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: dodgerblue;
+    color: #fff; }
+
+input::placeholder {
+  text-transform: uppercase;
+  color: lightblue;
+  letter-spacing: .5rem;
+  font-weight: bold; }
