@@ -7,10 +7,17 @@
         
         foreach(glob($DIR__NAME) as $section) {
             if ($section_name == basename($section, ".php")) {
-                $file_contents = file_get_contents($section, false);
-                return $file_contents;
+                // $file_contents = file_get_contents($section, false);
+                // return $file_contents;
+                require $section;
             }
         }
 
+    }
+
+    function displayErrorMessage($error) {
+        if (isset($error)) {
+            echo $error;
+        }
     }
 ?>
