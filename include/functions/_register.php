@@ -1,6 +1,6 @@
 <?php
 
-    require_once "db/connection.php";
+    require "db/connection.php";
 
     /* 
         Registration Functionality, Check the email in the database and if valid, register and log them in.

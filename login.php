@@ -12,7 +12,6 @@
         }
     ?>
 
-
     <?php require "include/partials/_nav.php" ?>
 
     <?= section("login-content", "login") ?>
