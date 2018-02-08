@@ -10,8 +10,8 @@
         case "register.php":
             $title = "Register |";
             break;
-        case "error.php":
-            $title = "Error |";
+        case "index.php":
+            $title = "Home |";
             break;
         case "profile.php":
             $title = "User Profile |";

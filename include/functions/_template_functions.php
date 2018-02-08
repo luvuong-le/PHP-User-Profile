@@ -13,9 +13,9 @@
         }
     }
 
-    function displayErrorMessage($error) {
-        if (isset($error)) {
-            echo $error;
-        }
-    }
+    // function displayErrorMessage($error) {
+    //     if (isset($error)) {
+    //         echo $error;
+    //     }
+    // }
 ?>

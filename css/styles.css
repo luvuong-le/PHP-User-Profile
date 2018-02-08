@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Crete+Round");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Crete Round', serif; }
+  font-family: 'Fira Sans', sans-serif; }
 
 .nav {
   font-size: 1.5rem;
@@ -75,6 +76,7 @@ html {
     border: solid #aaa; }
   .form-container__input {
     width: 100%;
+    margin: .2rem 0;
     padding: 1.5rem;
     border-radius: 5px;
     border: 1px solid lightblue; }
@@ -93,5 +95,49 @@ html {
 input::placeholder {
   text-transform: uppercase;
   color: lightblue;
-  letter-spacing: .5rem;
-  font-weight: bold; }
+  letter-spacing: .5rem; }
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 30, 181, 0.8);
+  display: flex; }
+
+.split {
+  position: relative;
+  width: 100%;
+  transition: all .5s; }
+  .split__title {
+    font-size: 3rem;
+    color: red;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; }
+  .split__left {
+    background: green;
+    width: 50%; }
+  .split__right {
+    background: brown;
+    width: 50%; }
+  .split__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 1px solid #000;
+    padding: 1rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    text-align: center; }
+
+.hovered {
+  width: 75%; }
+
+.unhovered {
+  width: 25%; }

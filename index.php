@@ -5,9 +5,7 @@
     <title><?= $title ?></title>
 </head>
 <body>
-    <?php require "include/partials/_error.php" ?>
-
-    <!-- <?= section("error-content", "error") ?> -->
+    <?= section("home-content", "home") ?>
     
     <?php require "include/partials/_footer.php" ?>
 </body>
