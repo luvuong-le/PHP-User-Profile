@@ -23,6 +23,7 @@
         if ($emailCheck->rowCount() > 0) {
             $_SESSION["message"] = "Email Already Exists";
             header("location: register.php");
+            exit(0);
         } else {
             // If the email hasnt been taken add the user to the database;
             $newUser = $connection->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
@@ -37,6 +38,7 @@
             $_SESSION['loggedIn'] = true;
 
             header("location: profile.php");
+            exit(0);
         }
 
     } catch (PDOException $e) {

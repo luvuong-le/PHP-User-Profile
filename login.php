@@ -6,6 +6,10 @@
 </head>
 <body>
     <?php
+        if (isset($_SESSION["loggedIn"])) {
+            header("location: profile.php");
+        }
+
         // If login is set then require the login-function file to log in the user
         if (isset($_POST["login"])) {
             require "include/functions/_login.php";

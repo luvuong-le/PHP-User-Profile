@@ -23,16 +23,20 @@
             if ($emailCheck->rowCount() < 0) {
                 $_SESSION["message"] = "Email is invalid";
                 header("location: error.php");
+                exit(0);
             } else {
                 $results = $emailCheck->fetch();
                 if (password_verify($password, $results["password"])) {
-                    // Redirect to the profile page after adding new session variables to keep track of login 
+                    // Redirect to the profile page after adding new session variables to keep track of login
+                    $_SESSION["name"] = $results["name"]; 
                     $_SESSION['loggedIn'] = true;
-
+                    $_SESSION["message"] = "Logged In Successfully!";
                     header("location: profile.php");
+                    exit(0);
                 } else {
                     $_SESSION["message"] = "Password is invalid!";
-                    header("location: login.php");   
+                    header("location: login.php"); 
+                    exit(0);  
                 }
             }
         }

@@ -7,13 +7,14 @@
 <main>
     <div class="form-container">
         <h3 class="form-container__title">User Registration</h3>
-        <span id="form-container__error" class="flash flash-red">        
-        <?php
-            if (isset($_SESSION["message"])) {
+        <?php if (isset($_SESSION["message"])): ?>
+            <div id="form-container__error" class="flash flash--red">
+            <?php
                 echo $_SESSION["message"];
-            }
-        ?>
-        </span>
+                unset($_SESSION["message"]);
+            ?>
+        </div>
+        <?php endif ?>
         <form action="register.php" method="POST" class="form-container__form">
             <input type="text" name="name" placeholder="Name" class="form-container__input" required>
             <input type="text" name="email" placeholder="Email" class="form-container__input" required>

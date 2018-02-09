@@ -6,13 +6,14 @@
 </head>
 <body>
     <?php 
-    
         require "include/partials/_nav.php";
         
         if (!isset($_SESSION["loggedIn"])) {
+            $_SESSION["message"] = "You must be logged in to view profile!";
             header("location: login.php");
+            exit(0);
         } else {
-            require "include/function/_profile.php";
+            require "include/functions/_profile.php";
         }
     
     ?>

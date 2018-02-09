@@ -6,9 +6,7 @@ let flash = {
 
     hideMessage: function() {
         setTimeout(() => {
-            if (this.e.flashMessage != null) {
                 this.e.flashMessage.style.display = "none";
-            }
         }, 3500);
     },
 

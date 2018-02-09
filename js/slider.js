@@ -14,7 +14,6 @@ let compSlider = {
         });
 
         this.e.right.addEventListener("mouseenter", (e) => {
-            console.log("heher");
             this.addHover(e.target);
         });
 
