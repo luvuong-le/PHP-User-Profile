@@ -9,7 +9,7 @@
 
         <?php if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true): ?>
             <li><a href="profile.php" class="nav__item"><?= $_SESSION["name"]?></a></li>
-            <li><a href="profile.php" class="nav__item">Logout</a></li>
+            <li><a href="logout.php" class="nav__item">Logout</a></li>
         <?php endif ?>
     </ul>
 </nav>

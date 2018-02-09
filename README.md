@@ -8,7 +8,7 @@ Login Page: Logs the user in and redirects to the user profile page.
 
 Register Page: Registers the user with an email, hashed password and username.
 
-Profile Page: Queries User Details from Database and displays it. (Only displays username, email and password).
+Profile Page: Displays User Details from Session Variables. (Only displays username and email). Ideal would be to query from database for more complicated user database schemas.
 
 
 --------------------------------- Feature ideas to add ---------------------------------

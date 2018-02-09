@@ -18,14 +18,14 @@
             $emailCheck = $connection->prepare("SELECT * FROM users WHERE email=?");
 
             $emailCheck->execute(array($email));
+            $results = $emailCheck->fetch();
 
             // If the email is not existing then ignore, else check the password with password verify
-            if ($emailCheck->rowCount() < 0) {
-                $_SESSION["message"] = "Email is invalid";
-                header("location: error.php");
+            if ($emailCheck->rowCount() < 0 || $email != $results["email"]) {
+                $_SESSION["message"] = "Email is invalid!";
+                header("location: login.php");
                 exit(0);
             } else {
-                $results = $emailCheck->fetch();
                 if (password_verify($password, $results["password"])) {
                     // Redirect to the profile page after adding new session variables to keep track of login
                     $_SESSION["name"] = $results["name"]; 

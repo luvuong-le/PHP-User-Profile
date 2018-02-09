@@ -16,3 +16,14 @@ let flash = {
 };
 
 flash.init();
+
+let password = document.getElementById("password-field");
+let passwordInput = document.getElementById("password-input");
+
+password.addEventListener("click", () => {
+    if (passwordInput.type == "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+});

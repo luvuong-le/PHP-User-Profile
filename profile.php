@@ -9,7 +9,7 @@
         require "include/partials/_nav.php";
         
         if (!isset($_SESSION["loggedIn"])) {
-            $_SESSION["message"] = "You must be logged in to view profile!";
+            $_SESSION["message"] = "You must be logged in to view your profile!";
             header("location: login.php");
             exit(0);
         } else {
